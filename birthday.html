@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Seju ❤️</title>
+
+<style>
+body{
+  margin:0;
+  font-family: Georgia, serif;
+  background: linear-gradient(180deg,#3a0012,#120007);
+  color:white;
+  text-align:center;
+  overflow-x:hidden;
+}
+
+h1{
+  margin-top:40px;
+  font-size:2.6rem;
+  color:#ffd1dc;
+  text-shadow:0 0 15px #ff4d6d;
+}
+
+h2{
+  margin-top:40px;
+  color:#ffb6c1;
+}
+
+.section{
+  padding:35px 20px;
+}
+
+.cake{
+  font-size:3rem;
+  cursor:pointer;
+  margin:15px 0;
+}
+
+.shayari{
+  font-size:1.3rem;
+  line-height:1.8;
+  max-width:900px;
+  margin:auto;
+  color:#ffe6eb;
+}
+
+/* galleries */
+.gallery{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.gallery img{
+  width:220px;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(255,105,135,0.6);
+}
+
+/* memories */
+.memory{
+  background:rgba(255,255,255,0.08);
+  padding:18px;
+  border-radius:18px;
+  width:260px;
+}
+
+.memory img{
+  width:100%;
+  border-radius:15px;
+}
+
+/* final text */
+.final{
+  font-size:2.3rem;
+  margin:60px 0;
+  color:#ffb3c6;
+  text-shadow:0 0 20px #ff4d6d;
+}
+
+/* hearts */
+.heart{
+  position:fixed;
+  bottom:-10px;
+  animation:rise 6s linear infinite;
+  font-size:20px;
+  color:#ff4d6d;
+}
+
+@keyframes rise{
+  from{transform:translateY(0);opacity:1}
+  to{transform:translateY(-100vh);opacity:0}
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND MUSIC (will play on first tap) -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<h1>Happy Birthday to my darling wifey 😘💗</h1>
+
+<div class="cake">🎂🕯️🕯️🎂</div>
+
+<div class="section shayari">
+  तुम्हारे साथ से ही मेरी पहचान है,<br>
+  वरना मैं तो खुद का भी एक अधूरा सा किस्सा था।<br>
+  तुम मिली तो ज़िंदगी मुकम्मल हो गई।
+</div>
+
+<div class="section shayari">
+  आज तुम्हारा जन्मदिन नहीं,<br>
+  आज उस मोहब्बत का जश्न है<br>
+  जिसने मेरी ज़िंदगी बदल दी।
+</div>
+
+<div class="section">
+  <h2>The Woman I Fell In Love With 💖</h2>
+  <div class="gallery">
+    <img src="image/photo1.jpg">
+    <img src="image/photo2.jpg">
+    <img src="image/photo3.jpg">
+  </div>
+</div>
+
+<div class="section">
+  <h2>Our Memories 💞</h2>
+  <div class="gallery">
+    <div class="memory">
+      <img src="image/photo4.jpg">
+      <p>Our Memories ❤️</p>
+    </div>
+    <div class="memory">
+      <img src="image/photo5.jpg">
+      <p>You & Me 💖</p>
+    </div>
+  </div>
+</div>
+
+<div class="final">
+  I Love You Seju ❤️
+</div>
+
+<script>
+// 🔊 MUSIC START ON FIRST TAP (ANDROID SAFE)
+let musicStarted = false;
+document.addEventListener("click", function(){
+  if(!musicStarted){
+    document.getElementById("bgMusic").play();
+    musicStarted = true;
+  }
+});
+
+// 💕 floating hearts
+setInterval(()=>{
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💕";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(14+Math.random()*20)+"px";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>
